@@ -184,4 +184,11 @@ def main():
             torch.save(model.state_dict(), best_path)
             print("-> best model saved\n")
         torch.save({"model": model.state_dict(), "opt": optimizer.state_dict(),
-                    "sched":
+                    "sched": scheduler.state_dict(), "epoch": epoch, "best_acc": best_acc},
+                   ckpt_path)
+
+    print(f"Done. Best validation accuracy: {best_acc:.2f}%  ->  {best_path}")
+
+
+if __name__ == "__main__":
+    main()
