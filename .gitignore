@@ -1,1 +1,23 @@
+# Model ve veri
+*.pth
+*.pt
+*.tar
+*.zip
+xiz_veri/
+dataset_final/
+modern_test/
+bagimsiz_test/
+kendi_gercek*/
+real_arkadas/
+raw_*/
 
+# Gizli bilgiler
+kaggle.json
+.env
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.ipynb_checkpoints/
