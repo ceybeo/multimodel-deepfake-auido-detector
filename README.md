@@ -86,7 +86,24 @@ Training data comes from [Xiz9Dataset](https://huggingface.co/datasets/KarmaLeo/
 
 ## Model weights
 
-Not included in the repository (about 70 MB). A download link will be added here.
+The trained weights (about 70 MB) are published as a release asset:
+[efficientnet_b4_v3.pth](https://github.com/ceybeo/multimodel-deepfake-auido-detector/releases/download/v0.1.0/efficientnet_b4_v3.pth)
+
+Download the file and place it next to `app.py`. On Windows PowerShell:
+
+```
+Invoke-WebRequest -Uri https://github.com/ceybeo/multimodel-deepfake-auido-detector/releases/download/v0.1.0/efficientnet_b4_v3.pth -OutFile efficientnet_b4_v3.pth
+```
+
+Research use only (see the Data section).
+
+## Roadmap
+
+- [x] Image detector (EfficientNet-B4, Streamlit app, evaluation on independent test sets)
+- [ ] Video: apply the image model frame by frame and aggregate the scores
+- [ ] Audio: spectrogram-based detector for synthetic speech
+- [ ] Larger and more diverse independent test sets (more devices, more generators, full-resolution ChatGPT images)
+- [ ] Combined multimodal interface
 
 ## Author
 
